@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação</title>
+    <link rel="stylesheet" href="css/avaliacao.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        /* CSS adicional para centralizar o formulário */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 80vh;
+        }
+        .main {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        .anchors {
+            display: none; /* Esconde a seção de links para centralizar melhor */
+        }
+        /* Estilo para links desabilitados */
+        .disabled-link {
+            pointer-events: none;
+            cursor: default;
+            color: grey;
+            text-decoration: none;
+        }
+
+        #nome, #email {
+            width: 80%;
+        }
+
+        #comentario {
+            width: 50%;
+        }
+
+        .submit-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        // JavaScript para exibir mensagem de agradecimento ao enviar a avaliação
+        function enviarAvaliacao(event) {
+            event.preventDefault(); // Previne o comportamento padrão do formulário
+            alert("Agradecemos pela sua avaliação!");
+        }
+    </script>
+</head>
+<body>
+
+    <header aria-label="Cabeçalho com a logo da página">   
+        <figure class="logo">
+            <a href="index.html" aria-label="Voltar para a página principal" title="Voltar para a Página Principal">
+                <img class="minha-logo" src="imgs/globo-domino.png" width="100" alt="Logo do Wikipedia de peças de dominó" title="Logo da Wikipedia Dominó"/>
+            </a>
+        </figure>
+    </header>
+
+    <nav class="bar" aria-label="Barra de navegação principal">
+        <ul>
+            <li><a href="index.html" title="Voltar para a Página Principal" aria-label="Voltar para a Página Principal">Página Principal</a></li>
+        </ul>
+    </nav>
+
+    <main class="content" aria-labelledby="main-content">
+        <section class="main" aria-labelledby="avaliacao">
+            <h1 id="avaliacao" title="Seção de avaliação">Avalie Nossa Página</h1>
+            <hr>
+            <p>
+                A sua opinião é muito importante para nós! Por favor, dedique um momento para compartilhar seu feedback sobre o conteúdo e a experiência em nossa página. 
+            </p>
+            
+            <form action="#" method="POST" aria-label="Formulário de avaliação" onsubmit="enviarAvaliacao(event)">
+                <fieldset>
+                    <legend title="Formulário de Avaliação">Formulário de Avaliação</legend>
+                    
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" aria-required="true" placeholder="Seu nome completo" required>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" aria-required="true" placeholder="seuemail@exemplo.com" required>
+                    <br>
+                    <label for="avaliacao">Qual sua opinião sobre o conteúdo da página?</label>
+                    <br>
+                    <select id="avaliacao" name="avaliacao" aria-required="true" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="excelente">Excelente</option>
+                        <option value="bom">Bom</option>
+                        <option value="regular">Regular</option>
+                        <option value="ruim">Ruim</option>
+                    </select>
+                    <br>
+                    <label for="comentario">Comentário:</label>
+                    <br>
+                    <textarea id="comentario" name="comentario" aria-required="true" placeholder="Escreva seu comentário aqui..." rows="5" required></textarea>
+                    <br>
+                    
+                    <button type="submit" class="submit-button">Enviar Avaliação</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer" aria-label="Rodapé com informações de contato">
+        <p>
+            <span class="disabled-link" title="Enviar email para contato">Contato</span> | 
+            <span class="disabled-link" title="Leia os Termos de Uso">Termos de Uso</span> | 
+            <span class="disabled-link" title="Leia nossa Política de Privacidade">Política de Privacidade</span>
+        </p>
+    </footer>
+
+</body>
+</html>
+

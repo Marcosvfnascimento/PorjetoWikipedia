@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+#linkBlue {
+    color: blue;
+}
+
+#avaliar {
+    text-align: right; /* Alinha o conteúdo à direita */
+    margin: 0px 20px; /* Adiciona margem de 20px */
+}
+
+#logo {
+    text-align: left;
+}
+
+.bar {
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 10px 0;
+    display: flex; /* Adiciona flexbox */
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+}
+
+.bar ul {
+    list-style-type: none;
+    display: flex; /* Mantém o layout em linha */
+}
+#video-iframe {
+    height: 380px; /* ou o valor que você desejar */
+    width: 90%; /* Isso faz com que o iframe use a largura disponível */
+}
+
+.bar li {
+    margin: 0 15px;
+}
+
+.bar a {
+    color: white;
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin-right: 20px;
+}
+
+.main {
+    flex: 3;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.main h1, .main h2 {
+    margin-top: 20px;
+}
+
+.img-domino, .img-domino-2 {
+    text-align: center;
+}
+
+.img-domino img, .img-domino-2 iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .sidebar {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .bar ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .bar li {
+        margin: 5px 0;
+    }
+}

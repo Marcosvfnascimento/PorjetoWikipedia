@@ -1,0 +1,48 @@
+   /* CSS adicional para centralizar o formulário */
+   .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;
+}
+.main {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+.anchors {
+    display: none; /* Esconde a seção de links para centralizar melhor */
+}
+/* Estilo para links desabilitados */
+.disabled-link {
+    pointer-events: none;
+    cursor: default;
+    color: grey;
+    text-decoration: none;
+}
+
+#nome, #email {
+    width: 80%;
+}
+
+#comentario {
+    width: 50%;
+}
+
+.submit-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
